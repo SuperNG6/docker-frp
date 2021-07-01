@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+# permissions
+chown -R abc:abc \
+    /config
+      
+chmod a+x \
+  /usr/local/bin/${FRP}

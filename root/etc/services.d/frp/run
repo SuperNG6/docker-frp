@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+exec \
+	s6-setuidgid abc ${FRP} -c /config/${FRP}.ini
+
+echo "Exiting ${FRP}"

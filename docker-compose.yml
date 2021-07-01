@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  aria2:
+    image: superng6/aria2
+    container_name: aria2
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Asia/Shanghai
+      - FRP=frpc
+    volumes:
+      - $PWD/config:/config
+    ports:
+      - 6800:6800
+    restart: unless-stopped   
+    

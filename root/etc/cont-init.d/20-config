@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p \
+	/config
+
+# copy files
+if [[ ! -e /config/${FRP}.ini ]]
+then
+  cp /usr/local/bin/${FRP}.ini /config/${FRP}.ini
+fi
+
