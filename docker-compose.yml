@@ -1,17 +1,17 @@
 version: "3"
 
 services:
-  aria2:
-    image: superng6/aria2
-    container_name: aria2
+  frp:
+    image: superng6/frp
+    container_name: frp
     environment:
       - PUID=1026
       - PGID=100
       - TZ=Asia/Shanghai
+      # 通过ENV判断frpc、frps
       - FRP=frpc
     volumes:
       - $PWD/config:/config
     ports:
       - 6800:6800
-    restart: unless-stopped   
-    
+    restart: unless-stopped  

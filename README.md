@@ -19,7 +19,7 @@ docker run -d \
 version: "3"
 
 services:
-  aria2:
+  frp:
     image: superng6/frp
     container_name: frp
     environment:
