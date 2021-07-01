@@ -18,7 +18,8 @@ fi
 
 # Download files
 echo "Downloading binary file: ${ARCH}"
-curl -L "https://github.com/fatedier/frp/releases/download/v${VERSION}/frp_${VERSION}_linux_${ARCH}.tar.gz" | tar -xz
+wget "https://github.com/fatedier/frp/releases/download/v${VERSION}/frp_${VERSION}_linux_${ARCH}.tar.gz"
+tar zxvf frp_${VERSION}_linux_${ARCH}.tar.gz
 
 if [[ ${FRP} == "FRPC" ]]; then
     FRP="frpc"
