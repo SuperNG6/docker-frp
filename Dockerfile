@@ -1,4 +1,4 @@
-FROM lsiobase/alpine:3.13 as builder
+FROM lsiobase/alpine:3.23 as builder
 
 WORKDIR /downloads
 COPY ReleaseTag  /downloads
@@ -10,7 +10,7 @@ RUN set -ex \
 	&& bash install.sh
 
 # install frp
-FROM lsiobase/alpine:3.13
+FROM lsiobase/alpine:3.23
 
 # set label
 LABEL maintainer="NG6"
